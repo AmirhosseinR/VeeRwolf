@@ -116,7 +116,7 @@ module veerwolf_nexys_video
       .ddram_ras_n (ddram_ras_n),
       .ddram_cas_n (ddram_cas_n),
       .ddram_we_n  (ddram_we_n),
-      .ddram_cs_n  (ddram_cs_n),
+      .ddram_cs_n  (), // ddram_cs_n
       .ddram_dm    (ddram_dm   ),
       .ddram_dq    (ddram_dq   ),
       .ddram_dqs_p (ddram_dqs_p),
