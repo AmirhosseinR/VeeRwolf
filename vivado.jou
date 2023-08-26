@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Aug 24 21:13:41 2023
+# Process ID: 6815
+# Current directory: /home/amir/Course/riscv/veerwolf/fusesoc_libraries/veerwolf
+# Command line: vivado
+# Log file: /home/amir/Course/riscv/veerwolf/fusesoc_libraries/veerwolf/vivado.log
+# Journal file: /home/amir/Course/riscv/veerwolf/fusesoc_libraries/veerwolf/vivado.jou
+# Running On: Amir, OS: Linux, CPU Frequency: 1947.499 MHz, CPU Physical cores: 2, Host memory: 8172 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/amir/Course/Xilinx/workspaces/RVfpva/Lab05/Lab05.xpr
+write_project_tcl -no_copy_sources -use_bd_files {/home/amir/Course/Xilinx/workspaces/RVfpva/Lab05/Lab05.tcl}
