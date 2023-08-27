@@ -7,6 +7,26 @@ This can be used to run the [RISC-V compliance tests](https://github.com/riscv/r
 
 This project was previously called SweRVolf. The last released version using the old name is v0.7.5
 
+# Command Summary
+
+Change directory
+
+    cd [veerwolf Directory]
+    export WORKSPACE=$(pwd)
+    export VEERWOLF_ROOT=$WORKSPACE/fusesoc_libraries/veerwolf
+
+Generate bitfile
+
+    fusesoc run --target=nexys_video veerwolf
+
+Program FPGA
+
+    openocd -f $VEERWOLF_ROOT/data/veerwolf_nexys_video_program.cfg
+
+Debug
+
+    openocd -f $VEERWOLF_ROOT/data/veerwolf_nexys_video_debug.cfg
+
 # Structure
 
 To ease portability, the SoC consists of a portable technology-agnostic core with target-specific wrappers. This chapter describes the functionality of the core and the technology-specific targets.
