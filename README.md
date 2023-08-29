@@ -45,6 +45,7 @@ Load elf file (in telnet terminal)
     load_image $WORKSPACE/fusesoc_libraries/veerwolf/sw/blinky.elf
 
 Run program
+
     reg pc 0
     resume
     halt
