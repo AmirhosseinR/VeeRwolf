@@ -31,6 +31,9 @@ Debug
 
     openocd -f $VEERWOLF_ROOT/data/veerwolf_nexys_video_debug.cfg
     telnet localhost 4444
+Load elf file
+
+    load_image $WORKSPACE/fusesoc_libraries/veerwolf/sw/blinky.elf
 
 Genetate elf file
 
