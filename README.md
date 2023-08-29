@@ -22,10 +22,17 @@ Generate bitfile
 Program FPGA
 
     openocd -f $VEERWOLF_ROOT/data/veerwolf_nexys_video_program.cfg
+    openocd -f $VEERWOLF_ROOT/data/veerwolf_nexys_video_program.cfg -c "set BITFILE $WORKSPACE/build/veerwolf_boot/nexys_video-vivado/veerwolf_0.7.5.bit
 
 Debug
 
     openocd -f $VEERWOLF_ROOT/data/veerwolf_nexys_video_debug.cfg
+    telnet localhost 4444
+
+Genetate elf file
+
+    riscv64-unknown-elf-gcc -c blinky.S -o blinky.o
+    riscv64-unknown-elf-ld -T link.ld -o blinky.elf blinky.o
 
 # Structure
 
