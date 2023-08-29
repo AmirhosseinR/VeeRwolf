@@ -27,18 +27,28 @@ Program FPGA with specific bitfile
 
     openocd -c "set BITFILE $WORKSPACE/build/veerwolf_boot/nexys_video-vivado/veerwolf_0.7.5.bit" -f $VEERWOLF_ROOT/data/veerwolf_nexys_video_program.cfg
 
-Debug
-
-    openocd -f $VEERWOLF_ROOT/data/veerwolf_nexys_video_debug.cfg
-    telnet localhost 4444
-Load elf file
-
-    load_image $WORKSPACE/fusesoc_libraries/veerwolf/sw/blinky.elf
-
 Genetate elf file
 
     riscv64-unknown-elf-gcc -c blinky.S -o blinky.o
     riscv64-unknown-elf-ld -T link.ld -o blinky.elf blinky.o
+    
+Debug
+
+    openocd -f $VEERWOLF_ROOT/data/veerwolf_nexys_video_debug.cfg
+    # Open new terminal
+    telnet localhost 4444
+    # Turn LED0 on
+    mwb 0x80001010 1
+    
+Load elf file (in telnet terminal)
+
+    load_image $WORKSPACE/fusesoc_libraries/veerwolf/sw/blinky.elf
+
+Run program
+    reg pc 0
+    resume
+    halt
+
 
 # Structure
 
