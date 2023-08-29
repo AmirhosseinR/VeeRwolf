@@ -51,6 +51,7 @@ Run program
     halt
 
 
+
 # Structure
 
 To ease portability, the SoC consists of a portable technology-agnostic core with target-specific wrappers. This chapter describes the functionality of the core and the technology-specific targets.
