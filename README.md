@@ -19,10 +19,13 @@ Generate bitfile
 
     fusesoc run --target=nexys_video veerwolf
 
-Program FPGA
+Program FPGA with default bitfile
 
     openocd -f $VEERWOLF_ROOT/data/veerwolf_nexys_video_program.cfg
-    openocd -f $VEERWOLF_ROOT/data/veerwolf_nexys_video_program.cfg -c "set BITFILE $WORKSPACE/build/veerwolf_boot/nexys_video-vivado/veerwolf_0.7.5.bit
+
+Program FPGA with specific bitfile
+
+    openocd -c "set BITFILE $WORKSPACE/build/veerwolf_boot/nexys_video-vivado/veerwolf_0.7.5.bit" -f $VEERWOLF_ROOT/data/veerwolf_nexys_video_program.cfg
 
 Debug
 
