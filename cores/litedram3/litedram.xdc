@@ -1,3 +1,7 @@
+set_property IO_BUFFER_TYPE NONE [get_ports {ddram_clk_n} ]
+set_property IO_BUFFER_TYPE NONE [get_ports {ddram_clk_p} ]
+
+
 # PadFunction: IO_L8N_T1_AD14N_35 
 set_property SLEW FAST [get_ports {ddram_dq[0]}]
 set_property IN_TERM NONE [get_ports {ddram_dq[0]}]
