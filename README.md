@@ -14,6 +14,7 @@ Change directory
     cd [veerwolf Directory]
     export WORKSPACE=$(pwd)
     export VEERWOLF_ROOT=$WORKSPACE/fusesoc_libraries/veerwolf
+    TARGET_SIM=$WORKSPACE/build/veerwolf_0.7.5/sim-verilator/Vveerwolf_core_tb
 
 Generate bitfile
 
