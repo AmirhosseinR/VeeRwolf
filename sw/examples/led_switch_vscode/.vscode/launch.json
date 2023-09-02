@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "gdb-openocd",
+        "type": "gdb",
+        "request": "attach",
+        "executable": "bin/main.elf",
+        "remote": true,
+        "target": ":3333",
+        "cwd": "${workspaceRoot}",
+        "gdbpath": "/opt/riscv/bin/riscv64-unknown-elf-gdb",
+        "preLaunchTask": "run_openocd",
+        "autorun": [
+          "set mem inaccessible-by-default off",
+          "set architecture riscv:rv32",
+          "set remotetimeout unlimited",
+          "monitor reset halt",
+          "load"
+        ]
+      },
+      {
+        "name": "build",
+        "cwd": "${workspaceRoot}",
+        "preLaunchTask": "run_build",
+      }
+    ]
+}

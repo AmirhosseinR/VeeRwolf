@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "run_openocd",
+      "type": "process",
+      "isBackground": true,
+      "command": "openocd",
+      "args": ["-f", "${workspaceRoot}/veerwolf_nexys_video_debug.cfg"],
+      "problemMatcher": [
+        {
+          "pattern": [
+          {
+            "regexp": ".",
+            "file": 1,
+            "location": 2,
+            "message": 3
+          }
+          ],
+          "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".",
+          "endsPattern": "."
+          }
+        }
+        ]
+    }
+  ],
+  "folders": [
+    {
+      "path": "."
+    }
+  ]
+}
