@@ -56,6 +56,13 @@ riscv-gnu-toolchain
     ./configure --prefix=/opt/riscv --enable-multilib
     sudo make -j$(nproc)
 
+vscode
+
+    Native Debug
+    Serial Monitor
+    C/C++ Extension Pack
+    Code Runner
+
 # Structure
 
 To ease portability, the SoC consists of a portable technology-agnostic core with target-specific wrappers. This chapter describes the functionality of the core and the technology-specific targets.
