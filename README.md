@@ -51,7 +51,10 @@ Run program
     resume
     halt
 
+riscv-gnu-toolchain
 
+    ./configure --prefix=/opt/riscv --enable-multilib
+    sudo make -j$(nproc)
 
 # Structure
 
